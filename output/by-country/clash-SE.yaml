@@ -20,33 +20,6 @@ proxies:
       Host: cf2.rumedia-cdn.com
 - name: 🇸🇪 SE 02 - xiaohe
   type: vless
-  server: 104.21.70.21
-  port: 8080
-  uuid: 50414e45-4c5f-5a45-5553-b45978f6d773
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /stream/PANEL_ZEUS/b45978f6d773/loc-1
-    headers:
-      Host: ljz5fuexub6s.nova-705deb.workers.dev
-- name: 🇸🇪 SE 03 - xiaohe
-  type: vless
-  server: 213.21.229.126
-  port: 12345
-  uuid: 8e80fe77-270e-4ac2-8f57-95761072d1a2
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristi
-    headers:
-      Host: ruu2rx-oycdrnsrzc.9uokolpk04vmg2ecqb8oys7.workers.dev
-- name: 🇸🇪 SE 04 - xiaohe
-  type: vless
   server: 202.155.11.249
   port: 443
   uuid: 0a2dde28-70da-4863-a06f-35d007d94d35
@@ -59,6 +32,13 @@ proxies:
     path: /cdn/v3/live
     headers:
       Host: cf2.rumedia-cdn.com
+- name: 🇸🇪 SE 03 - xiaohe
+  type: ss
+  server: 70.34.212.124
+  port: 8388
+  cipher: aes-256-gcm
+  password: AxIYWtskJWIIaefW
+  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -67,7 +47,6 @@ proxy-groups:
   - 🇸🇪 SE 01 - xiaohe
   - 🇸🇪 SE 02 - xiaohe
   - 🇸🇪 SE 03 - xiaohe
-  - 🇸🇪 SE 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -76,6 +55,5 @@ proxy-groups:
   - 🇸🇪 SE 01 - xiaohe
   - 🇸🇪 SE 02 - xiaohe
   - 🇸🇪 SE 03 - xiaohe
-  - 🇸🇪 SE 04 - xiaohe
 rules:
 - MATCH,PROXIES
