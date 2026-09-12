@@ -5,19 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
-  type: vless
-  server: bz9.wba-pn.ru
-  port: 2053
-  uuid: 9a47a8ff-8cdd-4a35-b765-fbad6d40e0a0
+  type: ss
+  server: 130.49.189.158
+  port: 43558
+  cipher: chacha20-ietf-poly1305
+  password: jIlQi9jGPJd7KHMx6Y4+JbaNoWSWfe2A73U4J4o0Qrs=
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: speedtest.tinkoff.ru
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: bz9.wba-pn.ru
 proxy-groups:
 - name: PROXIES
   type: select
