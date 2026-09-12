@@ -6,30 +6,6 @@ log-level: info
 proxies:
 - name: 🇫🇮 FI 01 - xiaohe
   type: vless
-  server: a2.arshia-nova.ir
-  port: 443
-  uuid: cc4a473a-2e15-4fc6-ec54-47c3aa5cec09
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ssl.fastly.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: c12.com
-- name: 🇫🇮 FI 02 - xiaohe
-  type: vmess
-  server: 65.109.189.128
-  port: 2086
-  uuid: f6361af8-bb8f-4609-bf5d-3fc0f688f47b
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: 🇫🇮 FI 03 - xiaohe
-  type: vless
   server: k2.cloud--vpn.site
   port: 443
   uuid: cc4a473a-2e15-4fc6-ec54-47c3aa5cec09
@@ -42,20 +18,34 @@ proxies:
     path: /
     headers:
       Host: c12.com
-- name: 🇫🇮 FI 04 - xiaohe
+- name: 🇫🇮 FI 02 - xiaohe
   type: vless
-  server: 104.16.150.108
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  server: 151.101.56.6
+  port: 443
+  uuid: cc4a473a-2e15-4fc6-ec54-47c3aa5cec09
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+  servername: ssl.fastly.com
   network: ws
   ws-opts:
-    path: /?ed=2560
+    path: /
     headers:
-      Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+      Host: c12.com
+- name: 🇫🇮 FI 03 - xiaohe
+  type: vless
+  server: 84.22.150.39
+  port: 7443
+  uuid: 5cc814de-2bbb-4409-ad8c-ee841ca7bad1
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: sxyyvihkektlx4rjxsdj.pkc73phpweu4rbxbatm444.workers.dev
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: sxyyvihkektlx4rjxsdj.pkc73phpweu4rbxbatm444.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -64,7 +54,6 @@ proxy-groups:
   - 🇫🇮 FI 01 - xiaohe
   - 🇫🇮 FI 02 - xiaohe
   - 🇫🇮 FI 03 - xiaohe
-  - 🇫🇮 FI 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -73,6 +62,5 @@ proxy-groups:
   - 🇫🇮 FI 01 - xiaohe
   - 🇫🇮 FI 02 - xiaohe
   - 🇫🇮 FI 03 - xiaohe
-  - 🇫🇮 FI 04 - xiaohe
 rules:
 - MATCH,PROXIES
