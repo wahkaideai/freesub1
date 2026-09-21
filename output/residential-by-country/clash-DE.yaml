@@ -4,7 +4,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇷 IR 01 - xiaohe
+- name: 🇩🇪 德国 (Germany) 01 (家宽) - xiaohe
   type: vless
   server: 89.110.66.154
   port: 443
@@ -23,12 +23,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇮🇷 IR 01 - xiaohe
+  - 🇩🇪 德国 (Germany) 01 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇷 IR 01 - xiaohe
+  - 🇩🇪 德国 (Germany) 01 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES
